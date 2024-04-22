@@ -1,0 +1,103 @@
+.navbar {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 1.5rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+.mainContainer {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainContainer a {
+  text-decoration: none;
+  color: white;
+}
+.mainContainer h1,
+.mainContainer p {
+  margin: 0;
+  padding: 0;
+}
+.logoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+.logoDiv img {
+  width: 5rem;
+}
+.logoTextDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.logoTextDiv h1 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 400;
+}
+.ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 1.7rem;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+.li {
+  padding: 0.1rem;
+}
+.loginRegister {
+  background-color: var(--gray);
+  color: var(--primary-color) !important;
+  padding: 0.2rem 1rem 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.dropdown {
+  position: relative;
+  display: none;
+}
+.dropdownContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 20;
+  width: max-content;
+  padding: 0 3rem 0 0.5rem;
+  border-radius: 5px;
+  background-color: rgba(228, 228, 228, 0.844);
+  font-weight: bold;
+  transition: transform 0.8s ease, padding-left 0.8s ease;
+}
+.dropdown:hover .dropdownContent {
+  opacity: 1;
+  transform: scale(1);
+}
+.dropdownContent a {
+  padding: 0.5rem;
+  width: 100%;
+  border-bottom: rgba(128, 128, 128, 0.3) 1px solid;
+  color: black !important;
+}
+.dropdownContent p:hover {
+  padding-left: 0.4rem;
+  transform: scale(1.05);
+}
+.li:hover .dropdown {
+  display: block;
+}

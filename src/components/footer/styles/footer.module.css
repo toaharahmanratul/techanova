@@ -1,0 +1,42 @@
+.mainContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  height: 23rem;
+  color: white;
+  margin-top: 8rem;
+  position: absolute;
+}
+.footerContentDiv {
+  margin-top: 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 25% 40%;
+  gap: 3rem;
+  padding: 0 10rem;
+}
+.footerInfoDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
+}
+.footerInfoDiv h1 {
+  font-size: 3rem;
+}
+.socialDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.linksDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-size: 2.5rem;
+}
+.socialDiv a {
+  color: rgb(215, 215, 215);
+}

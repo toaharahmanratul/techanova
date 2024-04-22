@@ -1,0 +1,180 @@
+.mainContainer {
+  width: 100%;
+}
+.mainContainer p {
+  line-height: 24px;
+}
+.primaryColor {
+  color: var(--primary-color);
+}
+.bannerImageDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow-y: hidden;
+  max-height: 350px;
+  background-color: black;
+}
+.bannerImage {
+  width: 100%;
+  opacity: 0.8;
+}
+
+.showRoute {
+  height: 80px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.showRoute h3 {
+  color: gray;
+  font-weight: 400;
+}
+.serviceHeading {
+  margin: 2rem 10rem;
+  padding: 2rem 8rem;
+}
+.serviceHeading h1 {
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+.serviceContent {
+  margin: 2rem 10rem;
+  padding: 2rem 8rem;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  gap: 4%;
+}
+.serviceContentLeft p {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+.serviceContentright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.serviceContentright p {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+.serviceContentright h2 {
+  font-weight: 400;
+  justify-self: flex-start;
+}
+.serviceContentright img {
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+/* Section 2 */
+.sectionHeading2 {
+  margin: 2rem 10rem;
+  padding: 0rem 8rem;
+}
+.sectionHeading2 h1 {
+  font-weight: 600;
+  color: rgb(17, 97, 188);
+}
+.sectionContent2 {
+  margin: 2rem 10rem;
+  padding: 1% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sectionContent2 img {
+  margin: 1rem;
+  width: 60%;
+  border-radius: 8px;
+}
+.sectionContent2 h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: rgb(6, 144, 199);
+}
+.sectionContent2 p {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+/* Section 3 */
+.sectionHeading3 {
+  margin: 2rem 10rem;
+  padding: 0rem 8rem;
+}
+.sectionHeading3 h1 {
+  font-weight: 600;
+  color: orangered;
+}
+.sectionContent3 {
+  margin: 2rem 10rem;
+  padding: 1% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sectionContent3 img {
+  margin: 1rem;
+  width: 60%;
+  border-radius: 8px;
+}
+.sectionContent3 h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: rgb(6, 144, 199);
+}
+.sectionContent3 p {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+.sectionContent3 .leftAligned {
+  align-self: flex-start !important;
+}
+
+/* Section 4 */
+.sectionContent4 {
+  margin: 2rem 10rem;
+  padding: 1% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.subSection {
+  align-self: flex-start;
+  line-height: 24px;
+}
+.subSection h2 {
+  font-weight: 600;
+  color: orangered;
+}
+.subSection ul {
+  margin-left: 2rem;
+}
+
+/* Section 5 */
+.sectionHeading5 {
+  margin: 2rem 10rem;
+  padding: 0rem 8rem;
+}
+.sectionHeading5 h1 {
+  color: navy;
+}
+.sectionContent5 {
+  margin: 2rem 10rem;
+  padding: 1% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
