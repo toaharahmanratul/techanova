@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--primary-color);
-  height: 23rem;
+  height: 350px;
   color: white;
   margin-top: 8rem;
   position: absolute;
@@ -39,4 +39,41 @@
 }
 .socialDiv a {
   color: rgb(215, 215, 215);
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    justify-content: flex-start;
+  }
+  .footerContentDiv {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin-top: 0;
+  }
+  .footerInfoDiv {
+    gap: 10px;
+    width: auto;
+  }
+  .footerInfoDiv h1 {
+    font-size: 24px;
+  }
+  .serviceDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .serviceDiv h2 {
+    font-size: 20px;
+  }
+  .socialDiv {
+    margin-top: 40px;
+  }
+  .linksDiv {
+    gap: 16px;
+    font-size: 24px;
+  }
 }

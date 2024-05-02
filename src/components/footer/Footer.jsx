@@ -19,7 +19,7 @@ const Footer = () => {
             <LiaCopyright /> Copyright. All rights reserved.
           </p>
         </div>
-        <div className={`${styles.servceDiv}`}>
+        <div className={`${styles.serviceDiv}`}>
           <h2>Services</h2>
           <p>Aviation School Agent</p>
           <p>Aviation Training Provider</p>
