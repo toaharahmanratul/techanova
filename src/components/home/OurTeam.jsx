@@ -12,26 +12,6 @@ const OurTeam = () => {
           <h2>S M Golam Rabbani</h2>
           <p>Designation</p>
         </Link>
-        <Link href="#" className={`${styles.card}`}>
-          <img src="/images/person.jpg" alt="" />
-          <h2>Person 2</h2>
-          <p>Designation</p>
-        </Link>
-        <Link href="#" className={`${styles.card}`}>
-          <img src="/images/person.jpg" alt="" />
-          <h2>Person 3</h2>
-          <p>Designation</p>
-        </Link>
-        <Link href="#" className={`${styles.card}`}>
-          <img src="/images/person.jpg" alt="" />
-          <h2>Person 4</h2>
-          <p>Designation</p>
-        </Link>
-        <Link href="#" className={`${styles.card}`}>
-          <img src="/images/person.jpg" alt="" />
-          <h2>Person 5</h2>
-          <p>Designation</p>
-        </Link>
       </div>
     </div>
   );

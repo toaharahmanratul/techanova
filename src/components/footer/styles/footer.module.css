@@ -6,7 +6,7 @@
   background-color: var(--primary-color);
   height: 350px;
   color: white;
-  margin-top: 8rem;
+  margin-top: 80px;
   position: absolute;
 }
 .footerContentDiv {
@@ -44,14 +44,15 @@
 @media (max-width: 768px) {
   .mainContainer {
     justify-content: flex-start;
+    margin-top: 40px;
   }
   .footerContentDiv {
     width: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 0;
+    gap: 20px;
+    padding: 10px;
     margin-top: 0;
   }
   .footerInfoDiv {
@@ -69,11 +70,17 @@
   .serviceDiv h2 {
     font-size: 20px;
   }
-  .socialDiv {
-    margin-top: 40px;
-  }
   .linksDiv {
     gap: 16px;
     font-size: 24px;
+  }
+}
+
+@media (max-width: 540px) {
+  .socialDiv {
+    margin-top: 40px;
+  }
+  .footerContentDiv {
+    justify-content: space-around;
   }
 }
