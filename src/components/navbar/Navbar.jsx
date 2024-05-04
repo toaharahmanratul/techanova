@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles/navbar.module.css";
 import Link from "next/link";
+import SlidingNav from "./sliding-nav/SlidingNav";
+import { HiMenu } from "react-icons/hi";
 
 const Navbar = () => {
+  const [isSlidingNavOpen, setIsSlidingNavOpen] = useState(false);
   return (
     <nav className={`${styles.navbar}`}>
       <div className={`${styles.mainContainer}`}>
+        <div className={`${styles.menuOptions}`}>
+          <HiMenu onClick={() => setIsSlidingNavOpen(!isSlidingNavOpen)} />
+        </div>
+        {isSlidingNavOpen && (
+          <div className={`${styles.slidingNavWrapper}`}>
+            <SlidingNav
+              isSlidingNavOpen={isSlidingNavOpen}
+              setIsSlidingNavOpen={setIsSlidingNavOpen}
+            />
+          </div>
+        )}
         <Link href="/" className={`${styles.logoDiv}`}>
           <div className={`${styles.logoTextDiv}`}>
             <h1 className="">Techanova</h1>

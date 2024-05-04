@@ -41,7 +41,7 @@
   color: rgb(215, 215, 215);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .mainContainer {
     justify-content: flex-start;
     margin-top: 40px;
