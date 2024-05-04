@@ -4,6 +4,7 @@
   position: fixed;
   left: 0;
   top: 0;
+  color: black;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
 }
