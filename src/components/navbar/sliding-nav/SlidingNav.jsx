@@ -14,6 +14,14 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
       setIsSlidingNavOpen(!isSlidingNavOpen);
     }
   };
+  const handleServiceDropdown = () => {
+    setIsServiceDropdownOpen(!isServiceDropdownOpen);
+    setIsCareerDropdownOpen(false);
+  };
+  const handleCareerDropdown = () => {
+    setIsCareerDropdownOpen(!isCareerDropdownOpen);
+    setIsServiceDropdownOpen(false);
+  };
 
   return (
     <div className={styles["sliding-nav-section"]} onClick={handleCloseMenu}>
@@ -37,7 +45,7 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
             {!isServiceDropdownOpen && (
               <div
                 className={styles["dropdown-arrow"]}
-                onClick={() => setIsServiceDropdownOpen(!isServiceDropdownOpen)}
+                onClick={handleServiceDropdown}
               >
                 <IoIosArrowDown />
               </div>
@@ -45,7 +53,7 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
             {isServiceDropdownOpen && (
               <div
                 className={styles["dropdown-arrow"]}
-                onClick={() => setIsServiceDropdownOpen(!isServiceDropdownOpen)}
+                onClick={handleServiceDropdown}
               >
                 <IoIosArrowUp />
               </div>
@@ -75,16 +83,53 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
             </div>
           )}
         </div>
+
+        {/* Career */}
         <div className={styles["menu-item"]}>
-          <Link href="/career">
-            <h3>Career</h3>
-          </Link>
+          <div className={styles["menu-content"]}>
+            <Link href="/career">
+              <h3>Career</h3>
+            </Link>
+            {!isCareerDropdownOpen && (
+              <div
+                className={styles["dropdown-arrow"]}
+                onClick={handleCareerDropdown}
+              >
+                <IoIosArrowDown />
+              </div>
+            )}
+            {isCareerDropdownOpen && (
+              <div
+                className={styles["dropdown-arrow"]}
+                onClick={handleCareerDropdown}
+              >
+                <IoIosArrowUp />
+              </div>
+            )}
+          </div>
+          {isCareerDropdownOpen && (
+            <div className={styles["menu-sub-content"]}>
+              <Link href="/career/vacancies">
+                <h3>Vacancies</h3>
+              </Link>
+            </div>
+          )}
+          {isCareerDropdownOpen && (
+            <div className={styles["menu-sub-content"]}>
+              <Link href="/career/apply-now">
+                <h3>Apply Now</h3>
+              </Link>
+            </div>
+          )}
         </div>
+
+        {/* About */}
         <div className={styles["menu-item"]}>
           <Link href="/about">
             <h3>About</h3>
           </Link>
         </div>
+
         <div className={styles["menu-item"]}>
           <Link href="/login">
             <h3>Login</h3>
