@@ -22,6 +22,9 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
     setIsCareerDropdownOpen(!isCareerDropdownOpen);
     setIsServiceDropdownOpen(false);
   };
+  const handleLinkClick = () => {
+    setIsSlidingNavOpen(!isSlidingNavOpen);
+  };
 
   return (
     <div className={styles["sliding-nav-section"]} onClick={handleCloseMenu}>
@@ -33,13 +36,13 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
           </div>
         </div>
         <div className={styles["menu-item"]}>
-          <Link href="/">
+          <Link href="/" onClick={handleLinkClick}>
             <h3>Home</h3>
           </Link>
         </div>
         <div className={styles["menu-item"]}>
           <div className={styles["menu-content"]}>
-            <Link href="/services">
+            <Link href="/services" onClick={handleLinkClick}>
               <h3>Our Services</h3>
             </Link>
             {!isServiceDropdownOpen && (
@@ -61,7 +64,10 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
           </div>
           {isServiceDropdownOpen && (
             <div className={styles["menu-sub-content"]}>
-              <Link href="/services/representation-of-georgian-aviation-university-in-bangladesh">
+              <Link
+                href="/services/representation-of-georgian-aviation-university-in-bangladesh"
+                onClick={handleLinkClick}
+              >
                 <h3>
                   Representation of Georgian Aviation University in Bangladesh
                 </h3>
@@ -70,14 +76,20 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
           )}
           {isServiceDropdownOpen && (
             <div className={styles["menu-sub-content"]}>
-              <Link href="/services/aviation-software-developer">
+              <Link
+                href="/services/aviation-software-developer"
+                onClick={handleLinkClick}
+              >
                 <h3>Aviation Software Development</h3>
               </Link>
             </div>
           )}
           {isServiceDropdownOpen && (
             <div className={styles["menu-sub-content"]}>
-              <Link href="/services/aviation-training-provider">
+              <Link
+                href="/services/aviation-training-provider"
+                onClick={handleLinkClick}
+              >
                 <h3>Aviation Training Solution</h3>
               </Link>
             </div>
@@ -87,7 +99,7 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
         {/* Career */}
         <div className={styles["menu-item"]}>
           <div className={styles["menu-content"]}>
-            <Link href="/career">
+            <Link href="/career" onClick={handleLinkClick}>
               <h3>Career</h3>
             </Link>
             {!isCareerDropdownOpen && (
@@ -109,14 +121,14 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
           </div>
           {isCareerDropdownOpen && (
             <div className={styles["menu-sub-content"]}>
-              <Link href="/career/vacancies">
+              <Link href="/career/vacancies" onClick={handleLinkClick}>
                 <h3>Vacancies</h3>
               </Link>
             </div>
           )}
           {isCareerDropdownOpen && (
             <div className={styles["menu-sub-content"]}>
-              <Link href="/career/apply-now">
+              <Link href="/career/apply-now" onClick={handleLinkClick}>
                 <h3>Apply Now</h3>
               </Link>
             </div>
@@ -125,18 +137,18 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
 
         {/* About */}
         <div className={styles["menu-item"]}>
-          <Link href="/about">
+          <Link href="/about" onClick={handleLinkClick}>
             <h3>About</h3>
           </Link>
         </div>
 
         <div className={styles["menu-item"]}>
-          <Link href="/login">
+          <Link href="/login" onClick={handleLinkClick}>
             <h3>Login</h3>
           </Link>
         </div>
         <div className={styles["menu-item"]}>
-          <Link href="/register">
+          <Link href="/register" onClick={handleLinkClick}>
             <h3>Register</h3>
           </Link>
         </div>

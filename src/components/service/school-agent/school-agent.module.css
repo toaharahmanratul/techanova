@@ -1,5 +1,8 @@
 .mainContainer {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .mainContainer p {
   line-height: 24px;
@@ -33,16 +36,15 @@
   font-weight: 400;
 }
 .serviceHeading {
-  margin: 2rem 10rem;
-  padding: 2rem 8rem;
+  margin: 60px 0px;
 }
 .serviceHeading h1 {
   font-size: 2.1rem;
   font-weight: 500;
 }
 .serviceContent {
-  margin: 2rem 10rem;
-  padding: 2rem 8rem;
+  padding: 0px 200px;
+  margin-bottom: 40px;
   display: grid;
   grid-template-columns: 48% 48%;
   gap: 4%;
@@ -74,16 +76,16 @@
 
 /* Section 2 */
 .sectionHeading2 {
-  margin: 2rem 10rem;
-  padding: 0rem 8rem;
+  align-self: flex-start;
+  margin: 20px 200px;
 }
 .sectionHeading2 h1 {
   font-weight: 600;
   color: rgb(17, 97, 188);
 }
 .sectionContent2 {
-  margin: 2rem 10rem;
-  padding: 1% 10%;
+  padding: 0px 200px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,8 +108,8 @@
 
 /* Section 3 */
 .sectionHeading3 {
-  margin: 2rem 10rem;
-  padding: 0rem 8rem;
+  align-self: flex-start;
+  margin: 20px 200px;
 }
 .sectionHeading3 h1 {
   font-weight: 600;
@@ -163,8 +165,8 @@
 
 /* Section 5 */
 .sectionHeading5 {
-  margin: 2rem 10rem;
-  padding: 0rem 8rem;
+  align-self: flex-start;
+  margin: 20px 200px;
 }
 .sectionHeading5 h1 {
   color: navy;

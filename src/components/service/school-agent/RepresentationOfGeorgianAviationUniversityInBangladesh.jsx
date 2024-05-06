@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/school-agent.module.css";
+import styles from "./school-agent.module.css";
 
 const RepresentationOfGeorgianAviationUniversityInBangladesh = () => {
   return (
