@@ -41,7 +41,7 @@ const Navbar = () => {
                 <Link href="/services/aviation-software-developer">
                   <p>Aviation Software Development</p>
                 </Link>
-                <Link href="/services/aviation-training-provider">
+                <Link href="/services/aviation-training-solution">
                   <p>Aviation Training Solution</p>
                 </Link>
               </div>

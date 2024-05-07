@@ -1,4 +1,4 @@
-import RepresentationOfGeorgianAviationUniversityInBangladesh from "@/components/service/school-agent/RepresentationOfGeorgianAviationUniversityInBangladesh";
+import RepresentationOfGeorgianAviationUniversityInBangladesh from "@/components/services/school-agent/RepresentationOfGeorgianAviationUniversityInBangladesh";
 import React from "react";
 
 const Index = () => {

@@ -22,7 +22,7 @@ const Services = () => {
           <h2>Aviation Software Development</h2>
         </Link>
         <Link
-          href="/services/aviation-training-provider"
+          href="/services/aviation-training-solution"
           className={`${styles.card}`}
         >
           <img src="/images/personnel_lincensing.jpg" alt="" />

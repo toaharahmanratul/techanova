@@ -1,0 +1,200 @@
+.mainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainContainer p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+.mainContainer img {
+  max-width: 100%;
+}
+.primaryColor {
+  color: var(--primary-color);
+}
+.navyColor {
+  color: rgb(17, 97, 188);
+}
+.orangeColor {
+  color: orangered;
+}
+.leftAligned {
+  align-self: flex-start;
+}
+.bannerImageDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow-y: hidden;
+  max-height: 350px;
+  background-color: black;
+}
+.bannerImage {
+  width: 100%;
+  opacity: 0.8;
+  object-fit: cover;
+}
+.showRoute {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.showRoute h3 {
+  color: gray;
+  font-weight: 400;
+}
+.serviceHeading {
+  width: 100%;
+  text-align: center;
+  margin: 60px 0px;
+}
+.serviceHeading h1 {
+  font-weight: 500;
+  font-size: 33px;
+}
+.contentSection {
+  width: 100%;
+  padding: 0px 200px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.twoColumn {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.serviceContentLeft {
+  width: 50%;
+}
+.serviceContentright {
+  width: 50%;
+}
+.serviceContentLeft p {
+  font-weight: 300;
+  font-size: 16px;
+}
+.serviceContentright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.serviceContentright p {
+  font-weight: 300;
+  font-size: 16px;
+}
+.serviceContentright h2 {
+  font-weight: 400;
+  justify-self: flex-start;
+}
+.serviceContentright img {
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+/* Section */
+.sectionHeading {
+  max-width: 100%;
+  align-self: flex-start;
+  margin: 20px 200px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+}
+.contentSection > img {
+  margin: 15px;
+  width: 60%;
+  border-radius: 8px;
+}
+.contentSection h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: rgb(6, 144, 199);
+}
+.contentSection ul {
+  margin-left: 24px;
+}
+.subSection {
+  margin: 10px 20px;
+}
+
+@media (max-width: 1024px) {
+  .mainContainer p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .serviceHeading {
+    margin: 20px 0px;
+    padding: 0px 20px;
+  }
+  .serviceHeading h1 {
+    font-weight: 500;
+    font-size: 28px;
+  }
+  .showRoute {
+    width: 100%;
+    height: 60px;
+    padding: 0px 20px;
+  }
+  .showRoute h3 {
+    font-weight: 300;
+    font-size: 16px;
+  }
+  .contentSection {
+    padding: 0px 20px;
+  }
+  .contentSection h2 {
+    font-weight: 450;
+    font-size: 22px;
+    line-height: 24px;
+    align-self: flex-start;
+  }
+  .contentSection > img {
+    width: 100%;
+  }
+  .twoColumn {
+    width: 100%;
+    flex-direction: column;
+    align-self: center;
+  }
+  .serviceContentLeft,
+  .serviceContentright {
+    width: 100%;
+  }
+  .serviceContentright h2 {
+    font-weight: 450;
+    font-size: 22px;
+  }
+  .sectionHeading {
+    width: 100%;
+    margin: 20px 0px;
+    padding: 0px 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .subSection h2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 420px) {
+  .serviceHeading h1 {
+    font-weight: 400;
+    font-size: 24px;
+  }
+}

@@ -87,7 +87,7 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
           {isServiceDropdownOpen && (
             <div className={styles["menu-sub-content"]}>
               <Link
-                href="/services/aviation-training-provider"
+                href="/services/aviation-training-solution"
                 onClick={handleLinkClick}
               >
                 <h3>Aviation Training Solution</h3>
