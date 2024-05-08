@@ -1,7 +1,8 @@
+import AviationSoftwareDevelopment from "@/components/services/aviation-software-development/AviationSoftwareDevelopment";
 import React from "react";
 
 const Index = () => {
-  return <div>Aviation Software Developer</div>;
+  return <AviationSoftwareDevelopment />;
 };
 
 export default Index;

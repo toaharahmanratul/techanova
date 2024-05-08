@@ -38,7 +38,7 @@ const Navbar = () => {
                     Representation of Georgian Aviation University in Bangladesh
                   </p>
                 </Link>
-                <Link href="/services/aviation-software-developer">
+                <Link href="/services/aviation-software-development">
                   <p>Aviation Software Development</p>
                 </Link>
                 <Link href="/services/aviation-training-solution">

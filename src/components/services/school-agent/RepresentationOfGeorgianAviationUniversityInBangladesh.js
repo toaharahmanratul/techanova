@@ -141,7 +141,7 @@ const RepresentationOfGeorgianAviationUniversityInBangladesh = () => {
       </section>
 
       <h1 className={`${styles.sectionHeading} ${styles.navyColor}`}>
-        How Techinnova Works
+        How Techannova Works
       </h1>
       <section className={`${styles.contentSection}`}>
         <div className={`${styles.subSection} ${styles.leftAligned}`}>
@@ -150,7 +150,7 @@ const RepresentationOfGeorgianAviationUniversityInBangladesh = () => {
             Techanova serves as a recruitment agency, reaching out to
             prospective students in Bangladesh who are interested in studying at
             Georgian Aviation University. They provide information about the
-            university's programs, admission requirements, and application
+            university&apos;s programs, admission requirements, and application
             procedures.
           </p>
         </div>
@@ -194,7 +194,7 @@ const RepresentationOfGeorgianAviationUniversityInBangladesh = () => {
         <div className={`${styles.subSection} ${styles.leftAligned}`}>
           <h2>Ongoing Communication</h2>
           <p>
-            Throughout the students' academic journey, the firm maintains
+            Throughout the students&apos; academic journey, the firm maintains
             communication with both the students and the university to address
             any concerns or issues that may arise. They serve as a point of
             contact for students who may need assistance or guidance during

@@ -15,7 +15,7 @@ const Services = () => {
           <h2>Representation of Georgian Aviation University in Bangladesh</h2>
         </Link>
         <Link
-          href="/services/aviation-software-developer"
+          href="/services/aviation-software-development"
           className={`${styles.card}`}
         >
           <img src="/images/organization.jpg" alt="" />

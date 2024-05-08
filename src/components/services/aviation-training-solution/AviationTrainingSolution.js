@@ -7,7 +7,7 @@ const AviationTrainingSolution = () => {
       <div className={`${styles.bannerImageDiv}`}>
         <img
           className={`${styles.bannerImage}`}
-          src="/images/service_2_banner.jpg"
+          src="/images/service_3_banner.jpg"
           alt=""
         />
       </div>
@@ -44,7 +44,7 @@ const AviationTrainingSolution = () => {
           With a focus on fostering a culture of safety and compliance, our
           training programs not only meet but exceed industry standards,
           ensuring that personnel are equipped to handle diverse scenarios with
-          confidence and competence. Whether it's mitigating risks associated
+          confidence and competence. Whether it&apos;s mitigating risks associated
           with Dangerous Goods, implementing robust Aviation Security measures,
           or optimizing Ground Handling operations, our firm stands as a trusted
           partner in elevating the proficiency and preparedness of aviation
@@ -59,7 +59,7 @@ const AviationTrainingSolution = () => {
         </p>
       </section>
       <h1 className={`${styles.sectionHeading} ${styles.navyColor}`}>
-        How Techinnova Works
+        How Techannova Works
       </h1>
       <section className={`${styles.contentSection}`}>
         <div className={`${styles.subSection} ${styles.leftAligned}`}>
