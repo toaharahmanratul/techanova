@@ -1,0 +1,125 @@
+.showcase {
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 450px;
+  padding: 0px 20px;
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 500px;
+}
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -60px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+.registrationCard {
+  background-color: var(--light-color);
+  position: relative;
+  top: 10px;
+  width: 800px;
+  height: 1000px;
+  z-index: 1;
+  border-radius: 10px;
+  color: #333;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.403);
+  padding: 30px 40px;
+}
+.registrationCard h2 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+.registrationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.fieldContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.fieldContainerDOB {
+  width: 100%;
+  gap: 6px;
+}
+.fieldContainer h4 {
+  font-weight: 600;
+  font-size: 18px;
+}
+.fieldContainer input, .fieldContainer select {
+  height: 43px;
+  width: auto;
+  padding-left: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 0.5px solid rgb(216, 216, 216);
+}
+.fieldContainer input:focus, .fieldContainer select:focus {
+  outline: none;
+  border-color: #387ddeab;
+}
+.btnRegister {
+  width: 400px;
+  margin-top: 20px;
+  background-color: #002240e9;
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  border: none;
+  padding: 18px;
+  border-radius: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.403);
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+}
+.btnRegister:hover {
+  background-color: var(--primary-color);
+}
+
+
+@media (max-width: 768px) {
+  .registrationCard h2 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 1px;
+  }
+  .btnRegister {
+    width: 280px;
+  }
+  .showcase {
+    margin-bottom: 600px;
+  }
+  .fieldContainer h4 {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .fieldContainer input {
+    font-size: 12px;
+  }
+}
+@media (max-width: 400px) {
+  .registrationCard {
+    margin: 0px 10px;
+  }
+}

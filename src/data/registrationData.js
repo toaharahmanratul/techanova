@@ -1,4 +1,4 @@
-const occupationOptions = [
+export const occupationOptions = [
   "Student",
   "Airline Professional",
   "Regulatory Professional",
@@ -10,4 +10,9 @@ const occupationOptions = [
   "Shippers",
   "Ground Handlers",
   "Others",
+];
+export const serviceOptions = [
+  "Representation of Georgian Aviation University in Bangladesh",
+  "Aviation Training Solution",
+  "Aviation Software Development",
 ];
