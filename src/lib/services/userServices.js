@@ -44,3 +44,33 @@ export const createUser = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
+
+export const verifyUserEmail = async (req, res) => {
+  try {
+    const { token } = req.body;
+    console.log(req.body);
+    const user = await userRepository.findOne({
+      query: {
+        verifyToken: token,
+        verifyTokenExpiry: { $gt: Date.now() },
+      },
+      select: "-password",
+    });
+    if (!user) {
+      return res.status(400).json({
+        error: "User not found, invalid token!",
+      });
+    }
+    user.isVerified = true;
+    user.verifyToken = undefined;
+    user.verifyTokenExpiry = undefined;
+    await user.save();
+
+    return res.status(200).json({
+      success: true,
+      message: "Email verified successfully!",
+    });
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+};
