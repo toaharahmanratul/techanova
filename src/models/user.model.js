@@ -18,10 +18,6 @@ const userschema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    dateOfBirth: {
-      type: Date,
-      required: true,
-    },
     dpURL: {
       type: String,
       default: "",

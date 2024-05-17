@@ -64,7 +64,8 @@
   font-weight: 600;
   font-size: 18px;
 }
-.fieldContainer input, .fieldContainer select {
+.fieldContainer input,
+.fieldContainer select {
   height: 43px;
   width: auto;
   padding-left: 10px;
@@ -72,7 +73,8 @@
   border-radius: 8px;
   border: 0.5px solid rgb(216, 216, 216);
 }
-.fieldContainer input:focus, .fieldContainer select:focus {
+.fieldContainer input:focus,
+.fieldContainer select:focus {
   outline: none;
   border-color: #387ddeab;
 }
@@ -96,16 +98,21 @@
   background-color: var(--primary-color);
 }
 
-
 @media (max-width: 768px) {
+  .registrationCard {
+    width: 95%;
+    padding: 20px 20px;
+  }
   .registrationCard h2 {
     font-weight: 400;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 36px;
     letter-spacing: 1px;
   }
   .btnRegister {
-    width: 280px;
+    width: 220px;
+    font-size: 12px;
+    padding: 14px;
   }
   .showcase {
     margin-bottom: 600px;
@@ -116,10 +123,5 @@
   }
   .fieldContainer input {
     font-size: 12px;
-  }
-}
-@media (max-width: 400px) {
-  .registrationCard {
-    margin: 0px 10px;
   }
 }

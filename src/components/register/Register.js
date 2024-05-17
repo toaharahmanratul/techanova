@@ -39,6 +39,7 @@ const Register = () => {
         phoneNumber,
         address,
       });
+      console.log("Inside try");
       alert("Registration is successful!");
       router.push("/verifyemail");
     } catch (error) {
@@ -62,7 +63,10 @@ const Register = () => {
         <div className={`${styles.showcase}`}>
           <div className={`${styles.registrationCard}`}>
             <h2>REGISTRATION</h2>
-            <form className={`${styles.registrationForm}`}>
+            <form
+              onSubmit={handleRegister}
+              className={`${styles.registrationForm}`}
+            >
               <div className={`${styles.fieldContainer}`}>
                 <h4>Name</h4>
                 <input
