@@ -3,7 +3,7 @@ import styles from "./register.module.css";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import { createNewUser } from "@/lib/apiRoutes";
-import { serviceOptions } from "../../data/registrationData";
+import { serviceOptions, occupationOptions } from "../../data/registrationData";
 
 const Register = () => {
   const router = useRouter();
@@ -39,7 +39,6 @@ const Register = () => {
         phoneNumber,
         address,
       });
-      console.log("Inside try");
       alert("Registration is successful!");
       router.push("/verifyemail");
     } catch (error) {
@@ -109,13 +108,18 @@ const Register = () => {
               </div>
               <div className={`${styles.fieldContainer}`}>
                 <h4>Occupation</h4>
-                <input
-                  type="text"
-                  placeholder="Occupation"
+                <select
                   value={occupation}
                   onChange={(e) => setOccupation(e.target.value)}
                   required
-                />
+                >
+                  <option value="">Select Occupation</option>
+                  {occupationOptions?.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div className={styles.fieldContainer}>
                 <h4>Choose Your Service</h4>
