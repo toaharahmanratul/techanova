@@ -53,7 +53,6 @@
   flex-direction: column;
   padding-top: 13px;
   padding-bottom: 5px;
-  /* justify-content: center; */
   border-bottom: 1px solid rgb(212, 212, 212);
 }
 .menu-content {
@@ -89,4 +88,14 @@
   background-color: rgba(80, 82, 85, 0.158);
   border-radius: 8px;
   border-bottom: 1px solid rgb(212, 212, 212);
+}
+.last-item {
+  width: 100%;
+  margin-top: auto;
+}
+.last-item button {
+  background-color: rgb(212, 212, 212);
+  border: none;
+  width: 100%;
+  padding: 10px;
 }

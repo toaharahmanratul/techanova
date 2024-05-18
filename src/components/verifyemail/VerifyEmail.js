@@ -13,19 +13,12 @@ const VerifyEmail = () => {
     setToken(urlToken || "");
   }, []);
 
-  useEffect(() => {
-    if (token.length > 0 && !verified) {
-      // verify();
-    }
-  }, [token, verified]);
-
   const verify = async () => {
     try {
       await verifyEmail({ token });
       setVerified(true);
     } catch (error) {
       setError(error);
-      console.log(error.response.data);
     }
   };
 

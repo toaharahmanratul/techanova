@@ -8,6 +8,4 @@ const API = axios.create({
 export const createNewUser = (payload) => API.post("/api/user", payload);
 export const verifyEmail = (payload) =>
   API.post("/api/user/verifyemail", payload);
-// export const getUser = (id) => API.get(`/api/user/${id}`);
-// export const verifyEmail = (payload) =>
-//   API.post("/api/user/verifyemail", payload);
+export const getUser = (id) => API.get(`/api/user/${id}`);

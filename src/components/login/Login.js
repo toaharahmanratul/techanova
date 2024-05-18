@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./login.module.css";
 import { useRouter } from "next/router";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { createNewUser } from "@/lib/apiRoutes";
 import { serviceOptions, occupationOptions } from "../../data/registrationData";
 
@@ -10,38 +10,27 @@ const Login = () => {
   const { data: session, status: sessionStatus } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  // useEffect(() => {
-  //   if (sessionStatus === "authenticated") {
-  //     router.replace("/dashboard");
-  //   }
-  // }, [sessionStatus, router]);
+  useEffect(() => {
+    if (sessionStatus === "authenticated") {
+      router.replace("/");
+    }
+  }, [sessionStatus, router]);
 
-  const handleRegister = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    try {
-      await createNewUser({
-        name,
-        email,
-        password,
-        organization,
-        occupation,
-        serviceName,
-        country,
-        phoneNumber,
-        address,
-      });
-      alert("Registration is successful!");
-      router.push("/verifyemail");
-    } catch (error) {
-      if (error.response) {
-        console.error("Server Error Response Data:", error.response.data);
-        alert(error.response.data);
-      } else if (error.request) {
-        console.error("No Response Received:", error.request);
-      } else {
-        console.error("Request Setup Error:", error.message);
-      }
+    const res = await signIn("credentials", {
+      redirect: false,
+      email,
+      password,
+    });
+    if (res?.error) {
+      setError(error);
+    } else if (res?.url) {
+      router.replace(res.url);
+    } else {
+      setError("Invalid credentials!");
     }
   };
 
@@ -55,7 +44,7 @@ const Login = () => {
           <div className={`${styles.registrationCard}`}>
             <h2>SIGN IN</h2>
             <form
-              onSubmit={handleRegister}
+              onSubmit={handleLogin}
               className={`${styles.registrationForm}`}
             >
               <div className={`${styles.fieldContainer}`}>

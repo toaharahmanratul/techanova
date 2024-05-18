@@ -19,11 +19,11 @@ const Register = () => {
   const [address, setAddress] = useState("");
   const [isChecked, setIsChecked] = useState(false);
 
-  // useEffect(() => {
-  //   if (sessionStatus === "authenticated") {
-  //     router.replace("/dashboard");
-  //   }
-  // }, [sessionStatus, router]);
+  useEffect(() => {
+    if (sessionStatus === "authenticated") {
+      router.replace("/");
+    }
+  }, [sessionStatus, router]);
 
   const handleRegister = async (e) => {
     e.preventDefault();

@@ -4,10 +4,18 @@ import { TfiClose } from "react-icons/tfi";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
 
-const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
+const SlidingNav = ({
+  isSlidingNavOpen,
+  setIsSlidingNavOpen,
+  handleLogoutClick,
+}) => {
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
   const [isCareerDropdownOpen, setIsCareerDropdownOpen] = useState(false);
+  const router = useRouter();
+  const { data: session, status: sessionStatus } = useSession();
 
   const handleCloseMenu = (e) => {
     if (e.target === e.currentTarget) {
@@ -40,6 +48,13 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
             <h3>Home</h3>
           </Link>
         </div>
+        {sessionStatus === "authenticated" && (
+          <div className={styles["menu-item"]}>
+            <Link href={`/user/dashboard`} onClick={handleLinkClick}>
+              <h3>Dashboard</h3>
+            </Link>
+          </div>
+        )}
         <div className={styles["menu-item"]}>
           <div className={styles["menu-content"]}>
             <Link href="/services" onClick={handleLinkClick}>
@@ -142,16 +157,32 @@ const SlidingNav = ({ isSlidingNavOpen, setIsSlidingNavOpen }) => {
           </Link>
         </div>
 
-        <div className={styles["menu-item"]}>
-          <Link href="/login" onClick={handleLinkClick}>
-            <h3>Login</h3>
-          </Link>
-        </div>
-        <div className={styles["menu-item"]}>
-          <Link href="/register" onClick={handleLinkClick}>
-            <h3>Register</h3>
-          </Link>
-        </div>
+        {sessionStatus !== "authenticated" && (
+          <div className={styles["menu-item"]}>
+            <Link href="/login" onClick={handleLinkClick}>
+              <h3>Login</h3>
+            </Link>
+          </div>
+        )}
+        {sessionStatus !== "authenticated" && (
+          <div className={styles["menu-item"]}>
+            <Link href="/register" onClick={handleLinkClick}>
+              <h3>Register</h3>
+            </Link>
+          </div>
+        )}
+        {sessionStatus === "authenticated" && (
+          <div className={styles["last-item"]}>
+            <button
+              onClick={() => {
+                handleLinkClick();
+                handleLogoutClick();
+              }}
+            >
+              Logout
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

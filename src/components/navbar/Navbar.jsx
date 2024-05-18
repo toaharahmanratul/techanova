@@ -3,9 +3,18 @@ import styles from "./styles/navbar.module.css";
 import Link from "next/link";
 import SlidingNav from "./sliding-nav/SlidingNav";
 import { HiMenu } from "react-icons/hi";
+import { useRouter } from "next/router";
+import { signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
   const [isSlidingNavOpen, setIsSlidingNavOpen] = useState(false);
+  const router = useRouter();
+  const { data: session, status: sessionStatus } = useSession();
+
+  const handleLogoutClick = () => {
+    signOut();
+  };
+
   return (
     <nav className={`${styles.navbar}`}>
       <div className={`${styles.mainContainer}`}>
@@ -17,6 +26,7 @@ const Navbar = () => {
             <SlidingNav
               isSlidingNavOpen={isSlidingNavOpen}
               setIsSlidingNavOpen={setIsSlidingNavOpen}
+              handleLogoutClick={handleLogoutClick}
             />
           </div>
         )}
@@ -29,6 +39,13 @@ const Navbar = () => {
           <li className={`${styles.li}`}>
             <Link href="/">Home</Link>
           </li>
+          {sessionStatus === "authenticated" && (
+            <li>
+              <Link href={`/user/dashboard`}>
+                Dashboard
+              </Link>
+            </li>
+          )}
           <li className={`${styles.li}`}>
             <Link href="/services">Our Services</Link>
             <div className={`${styles.dropdown}`}>
@@ -79,12 +96,44 @@ const Navbar = () => {
               </div>
             </div>
           </li>
-          <li>
-            <Link href="/login">Login</Link>
-          </li>
-          <li>
-            <Link href="/register">Register</Link>
-          </li>
+          {sessionStatus !== "authenticated" && (
+            <li>
+              <Link href="/login">Login</Link>
+            </li>
+          )}
+          {sessionStatus !== "authenticated" && (
+            <li>
+              <Link href="/register">Register</Link>
+            </li>
+          )}
+          {sessionStatus === "authenticated" && (
+            <li className={`${styles.li}`}>
+              <Link href={`/user/dashboard`}>
+                <img
+                  className={`${styles.dp}`}
+                  src={session?.user?.dpURL || "/images/default_DP.jpg"}
+                  alt="Profile Picture"
+                />
+              </Link>
+              <div className={`${styles.dropdown}`}>
+                <div className={`${styles.dropdownContent}`}>
+                  <Link href={`/user/dashboard`}>
+                    <p>{`${session?.user?.name}`}</p>
+                  </Link>
+                </div>
+              </div>
+            </li>
+          )}
+          {sessionStatus === "authenticated" && (
+            <li>
+              <button
+                className={`${styles.btnLogout}`}
+                onClick={handleLogoutClick}
+              >
+                Logout
+              </button>
+            </li>
+          )}
         </ul>
       </div>
     </nav>

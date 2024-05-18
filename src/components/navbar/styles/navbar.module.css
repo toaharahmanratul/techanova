@@ -101,6 +101,21 @@
 .li:hover .dropdown {
   display: block;
 }
+.dp {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+.btnLogout {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.btnLogout:hover {
+  color: rgb(251, 47, 44);
+}
 .menuOptions {
   display: none;
 }
