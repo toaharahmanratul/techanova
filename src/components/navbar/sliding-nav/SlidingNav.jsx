@@ -50,7 +50,7 @@ const SlidingNav = ({
         </div>
         {sessionStatus === "authenticated" && (
           <div className={styles["menu-item"]}>
-            <Link href={`/user/dashboard`} onClick={handleLinkClick}>
+            <Link href="/user/dashboard" onClick={handleLinkClick}>
               <h3>Dashboard</h3>
             </Link>
           </div>

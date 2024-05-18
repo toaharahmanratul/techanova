@@ -41,9 +41,7 @@ const Navbar = () => {
           </li>
           {sessionStatus === "authenticated" && (
             <li>
-              <Link href={`/user/dashboard`}>
-                Dashboard
-              </Link>
+              <Link href="/user/dashboard">Dashboard</Link>
             </li>
           )}
           <li className={`${styles.li}`}>
