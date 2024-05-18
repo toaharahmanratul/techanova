@@ -90,8 +90,9 @@
   border-bottom: 1px solid rgb(212, 212, 212);
 }
 .last-item {
-  width: 100%;
-  margin-top: auto;
+  width: 340px;
+  position: absolute;
+  bottom: 0;
 }
 .last-item button {
   background-color: rgb(212, 212, 212);
