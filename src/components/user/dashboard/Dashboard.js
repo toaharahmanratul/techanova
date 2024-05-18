@@ -24,9 +24,17 @@ const Dashboard = () => {
     };
 
     fetchUserData();
-  }, []);
 
-  console.log({ userData });
+    const timeoutId = setTimeout(() => {
+      fetchUserData();
+    }, 5000);
+    
+    return () => clearTimeout(timeoutId);
+  }, [session]);
+
+  if (!session) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className={styles["main-section"]}>
