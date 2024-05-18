@@ -175,8 +175,8 @@ const SlidingNav = ({
           <div className={styles["last-item"]}>
             <button
               onClick={() => {
-                handleLinkClick();
                 handleLogoutClick();
+                handleLinkClick();
               }}
             >
               Logout

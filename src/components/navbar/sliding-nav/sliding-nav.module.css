@@ -1,6 +1,6 @@
 .sliding-nav-section {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   left: 0;
   top: 0;
@@ -91,7 +91,7 @@
 }
 .last-item {
   width: 340px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 .last-item button {
