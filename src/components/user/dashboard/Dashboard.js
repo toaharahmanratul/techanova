@@ -26,6 +26,8 @@ const Dashboard = () => {
     fetchUserData();
   }, []);
 
+  console.log({ userData });
+
   return (
     <div className={styles["main-section"]}>
       <div className={styles["top-section"]}>
@@ -49,6 +51,37 @@ const Dashboard = () => {
             <p>{`${userData?.occupation}, ${userData?.organization}`}</p>
           )}
         </div>
+      </div>
+      <div className={styles["profile-details-section"]}>
+        <h2>Details</h2>
+        <p>{`Name: ${userData?.name}`}</p>
+        <p>{`Email: ${userData?.email}`}</p>
+        {userData?.occupation !== "others" && (
+          <p>{`Occupation: ${userData?.occupation}`}</p>
+        )}
+        <p>{`Organization: ${userData?.organization}`}</p>
+        <p>{`Mobile: ${userData?.phoneNumber}`}</p>
+        <p>{`Address: ${userData?.address}`}</p>
+        <p>{`Availed Service: ${userData?.serviceName}`}</p>
+        <div className={styles["status-container"]}>
+          <h3>
+            Status:{" "}
+            <span
+              className={`${styles["status"]} ${
+                userData?.paymentStatus == "paid"
+                  ? styles["active"]
+                  : styles["pending"]
+              }`}
+            >
+              {userData?.paymentStatus == "paid" ? "PAID" : "PENDING"}
+            </span>
+          </h3>
+        </div>
+        {userData?.paymentStatus != "paid" && (
+          <p className={styles["reach-us"]}>
+            (Please reach out to us to get activated)
+          </p>
+        )}
       </div>
     </div>
   );

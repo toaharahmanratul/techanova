@@ -47,6 +47,10 @@ const userschema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    paymentStatus: {
+      type: String,
+      required: false,
+    },
     verifyToken: {
       type: String,
     },
