@@ -11,6 +11,12 @@ const Dashboard = () => {
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
+    if (sessionStatus !== "authenticated") {
+      router.replace("/");
+    }
+  }, [sessionStatus, router]);
+
+  useEffect(() => {
     const fetchUserData = async () => {
       try {
         const id = session?.user._id;
@@ -28,7 +34,7 @@ const Dashboard = () => {
     const timeoutId = setTimeout(() => {
       fetchUserData();
     }, 5000);
-    
+
     return () => clearTimeout(timeoutId);
   }, [session]);
 
